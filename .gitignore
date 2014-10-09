@@ -1,0 +1,17 @@
+*.pyc
+*.mo
+.DS_Store
+local_settings.py
+*.mo
+*.sqlite3
+dump.rdb
+fever_sphinx.conf
+/resources/avatars/
+/resources/images/
+/resources/_output/
+/resources/extras/
+/fever/apps/api/middleware.py
+.coverage
+package.box
+.vagrant/
+rundevserver.sh
