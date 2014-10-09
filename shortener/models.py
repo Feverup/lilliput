@@ -1,9 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext as _
-from django.db.models.signals import post_save
 from django.core.urlresolvers import reverse
-
-from numconv import NumConv
 
 
 class ShortLink(models.Model):
@@ -21,15 +18,10 @@ class ShortLink(models.Model):
         verbose_name_plural = _('ShortLinks')
 
     def get_absolute_url(self):
-        return reverse('shortener:go', args=[self.hash])
+        if self.hash:
+            return reverse('shortener:go', args=[self.hash])
+        else:
+            return ""
 
     def __unicode__(self):
         return "({}) {}".format(self.id, self.original_url)
-
-
-def update_hash(sender, instance, **kwargs):
-    if not instance.hash:
-        instance.hash = NumConv(64).int2str(instance.id)
-        instance.save()
-
-post_save.connect(update_hash, sender=ShortLink, dispatch_uid="update_hash_link")

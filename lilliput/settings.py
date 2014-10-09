@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_extensions',  # shell_plus and other nice features
     'rest_framework',
+    'rest_framework.authtoken',
     'shortener',
 )
 
