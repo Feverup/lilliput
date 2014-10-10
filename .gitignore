@@ -15,3 +15,9 @@ fever_sphinx.conf
 package.box
 .vagrant/
 rundevserver.sh
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov
