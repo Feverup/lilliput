@@ -3,3 +3,4 @@ djangorestframework==2.4.3
 wsgiref==0.1.2
 django-extensions==1.4.0
 psycopg2
+numconv==2.1.1
