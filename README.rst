@@ -9,6 +9,20 @@ How it works
 It's really simple. Links are model objects, each object has an auto-incremental primary key is converted to another 'number' in base 64.
 Writing numbers in this fashion allows to represent billions of URLs using just 4 chars.
 
+Installing
+----------
+
+.. code-block :: bash
+
+    $ git clone git@github.com:Feverup/lilliput.git
+    $ mkvirtualenv lilliput
+    $ cd lilliput
+    $ pip install -r requirements.txt
+    $ python manage.py syncdb
+    $ python manage.py migrate
+    $ python manage.py runserver
+
+
 Shortening URLs
 ---------------
 
