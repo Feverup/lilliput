@@ -1,6 +1,7 @@
 from django.views.generic import RedirectView
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
 from .models import ShortLink
 from .serializers import ShortLinkSerializer
 
@@ -9,6 +10,7 @@ class ShortLinkViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows ShortLink to be viewed or edited.
     """
+    authentication_classes = (SessionAuthentication, BasicAuthentication, TokenAuthentication)
     permission_classes = (IsAuthenticated,)
     queryset = ShortLink.objects.all()
     serializer_class = ShortLinkSerializer

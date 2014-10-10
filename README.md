@@ -1,4 +1,0 @@
-lilliput
-========
-
-Django URL shortener

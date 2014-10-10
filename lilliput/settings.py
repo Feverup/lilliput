@@ -87,6 +87,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # This will allow us to have custom configurations depending on the
 # environment (dev,production,beta,etc...)
 try:
