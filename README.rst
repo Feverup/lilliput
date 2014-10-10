@@ -1,6 +1,6 @@
 .. image:: https://travis-ci.org/Feverup/lilliput.png?branch=master
         :target: https://travis-ci.org/Feverup/lilliput/
-
+.. image:: https://coveralls.io/repos/Feverup/lilliput/badge.png :target: https://coveralls.io/r/Feverup/lilliput
 
 lilliput
 ========
