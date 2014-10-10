@@ -8,7 +8,7 @@ class ShortLink(models.Model):
     Short Link model
     """
 
-    original_url = models.URLField(_('Original URL'), unique=True)
+    original_url = models.URLField(_('Original URL'), max_length=2000, unique=True)
     hash = models.CharField(_(' URL Hash'), max_length=50, null=True, blank=True, db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
