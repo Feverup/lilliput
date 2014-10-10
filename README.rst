@@ -1,3 +1,7 @@
+.. image:: https://travis-ci.org/Feverup/lilliput.png?branch=master
+        :target: https://travis-ci.org/Feverup/lilliput/
+
+
 lilliput
 ========
 
