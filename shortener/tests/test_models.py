@@ -16,4 +16,4 @@ class TestShortLinkModel(TestCase):
         self.assertEqual(self.obj.hash, '1')
 
     def test_last_hash(self):
-        self.assertEqual(self.obj2.hash, '4i')
+        self.assertEqual(self.obj2.hash, '4q')

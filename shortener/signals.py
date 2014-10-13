@@ -15,5 +15,5 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 @receiver(post_save, sender=ShortLink)
 def update_hash(sender, instance, **kwargs):
     if not instance.hash:
-        instance.hash = NumConv(64).int2str(instance.id)
+        instance.hash = NumConv(62).int2str(instance.id)
         instance.save()
