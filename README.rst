@@ -11,7 +11,7 @@ Django URL shortener based in Django 1.7
 How it works
 ------------
 
-It's really simple. Links are model objects, each object has an auto-incremental primary key is converted to another 'number' in base 64.
+It's really simple. Links are model objects, each object has an auto-incremental primary key is converted to another 'number' in base 62.
 Writing numbers in this fashion allows to represent billions of URLs using just 4 chars.
 
 Installing
