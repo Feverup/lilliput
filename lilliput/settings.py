@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',  # shell_plus and other nice features
+    'raven.contrib.django.raven_compat', # Sentry
     'rest_framework',
     'rest_framework.authtoken',
     'shortener',
