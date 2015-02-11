@@ -47,6 +47,7 @@ INSTALLED_APPS = (
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
@@ -82,6 +83,19 @@ USE_L10N = True
 
 USE_TZ = True
 
+#List restricting available languages
+ugettext = lambda s: s
+LANGUAGES = (
+    ('es', ugettext('Spanish')),
+    ('en', ugettext('English')),
+    ('ca', ugettext('Catalonian')),
+)
+
+ACCEPTED_LANGUAGES = ['en', 'es', 'ca']
+
+LOCALE_PATHS = (
+    os.path.join(SITE_ROOT,'../locale'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
