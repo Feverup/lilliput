@@ -94,7 +94,7 @@ LANGUAGES = (
 ACCEPTED_LANGUAGES = ['en', 'es', 'ca']
 
 LOCALE_PATHS = (
-    os.path.join(SITE_ROOT,'../locale'),
+    os.path.join(BASE_DIR,'../locale'),
 )
 
 # Static files (CSS, JavaScript, Images)
