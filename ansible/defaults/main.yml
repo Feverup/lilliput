@@ -1,0 +1,12 @@
+---
+
+project:
+  appname: lilliput
+  user: fever
+  root: /var/www/virtualhosts/lilliput/code
+  repo: git@github.com:Feverup/lilliput.git
+  branch: staging
+  virtualenv: /var/www/virtualhosts/lilliput/environ
+  module: lilliput.wsgi
+  settings: lilliput
+
