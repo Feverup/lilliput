@@ -5,7 +5,7 @@ project:
   user: fever
   root: /var/www/virtualhosts/lilliput
   repo: git@github.com:Feverup/lilliput.git
-  branch: staging
+  branch: master
   virtualenv: /var/www/virtualhosts/lilliput/environ
   module: lilliput.wsgi
   settings: lilliput
