@@ -1,5 +1,18 @@
 ---
 
+- name: create settings directory
+  sudo_user: "{{project.user}}"
+  file: >
+    state=directory
+    path={{project.root}}/code/config
+
+- name: create settings file
+  sudo_user: "{{project.user}}"
+  file: >
+    state=link
+    path={{project.root}}/code/config/lilliput_settings.py
+    src={{project.root}}/code/lilliput/settings.py
+
 - name: install pip requirements
   sudo: true
   sudo_user: "{{project.user}}"
