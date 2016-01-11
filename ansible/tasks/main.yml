@@ -4,7 +4,7 @@
   sudo: true
   sudo_user: "{{project.user}}"
   pip: >
-    requirements={{project.root}}/requirements.txt
+    requirements={{project.root}}/code/requirements.txt
     virtualenv={{project.virtualenv}}
     virtualenv_site_packages=yes
   notify:

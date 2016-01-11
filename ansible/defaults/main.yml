@@ -3,7 +3,7 @@
 project:
   appname: lilliput
   user: fever
-  root: /var/www/virtualhosts/lilliput/code
+  root: /var/www/virtualhosts/lilliput
   repo: git@github.com:Feverup/lilliput.git
   branch: staging
   virtualenv: /var/www/virtualhosts/lilliput/environ
