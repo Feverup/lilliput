@@ -1,5 +1,7 @@
 ---
 
+djangotop: /var/www/virtualhosts
+
 project:
   appname: lilliput
   user: fever
