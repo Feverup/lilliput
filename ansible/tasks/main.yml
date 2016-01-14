@@ -2,24 +2,24 @@
 
 - name: install pip requirements
   sudo: true
-  sudo_user: "{{project.user}}"
+  sudo_user: "{{git.user}}"
   pip: >
-    requirements={{project.root}}/requirements.txt
-    virtualenv={{project.virtualenv}}
+    requirements={{git.root}}/requirements.txt
+    virtualenv={{git.virtualenv}}
     virtualenv_site_packages=yes
   notify:
     - restart uwsgi
 
 - name: create settings directory
-  sudo_user: "{{project.user}}"
+  sudo_user: "{{git.user}}"
   file: >
     state=directory
-    path={{project.root}}/config
+    path={{git.root}}/config
 
 - name: create settings file
-  sudo_user: "{{project.user}}"
+  sudo_user: "{{git.user}}"
   file: >
     state=link
-    path={{project.root}}/config/lilliput_settings.py
-    src={{project.root}}/lilliput/settings.py
+    path={{git.root}}/config/lilliput_settings.py
+    src={{git.root}}/lilliput/settings.py
 

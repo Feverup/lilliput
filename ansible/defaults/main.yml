@@ -1,14 +1,14 @@
 ---
 
-djangotop: /var/www/virtualhosts
+git:
+  user: fever
+  root: /var/www/virtualhosts/lilliput/code
+  virtualenv: /var/www/virtualhosts/lilliput/environ
+  repo: lilliput
+  branch: master
 
 project:
   appname: lilliput
-  user: fever
-  root: /var/www/virtualhosts/lilliput/code
-  repo: git@github.com:Feverup/lilliput.git
-  branch: master
-  virtualenv: /var/www/virtualhosts/lilliput/environ
   module: lilliput.wsgi
   settings: lilliput
 
