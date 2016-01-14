@@ -1,5 +1,15 @@
 ---
 
+- name: install pip requirements
+  sudo: true
+  sudo_user: "{{project.user}}"
+  pip: >
+    requirements={{project.root}}/code/requirements.txt
+    virtualenv={{project.virtualenv}}
+    virtualenv_site_packages=yes
+  notify:
+    - restart uwsgi
+
 - name: create settings directory
   sudo_user: "{{project.user}}"
   file: >
