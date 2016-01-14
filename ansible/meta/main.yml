@@ -1,5 +1,5 @@
 ---
 
 dependencies:
-  - role: djangoclone
+  - role: djangoserver
 

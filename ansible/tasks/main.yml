@@ -13,13 +13,3 @@
     path={{project.root}}/code/config/lilliput_settings.py
     src={{project.root}}/code/lilliput/settings.py
 
-- name: install pip requirements
-  sudo: true
-  sudo_user: "{{project.user}}"
-  pip: >
-    requirements={{project.root}}/code/requirements.txt
-    virtualenv={{project.virtualenv}}
-    virtualenv_site_packages=yes
-  notify:
-    - restart uwsgi
-
