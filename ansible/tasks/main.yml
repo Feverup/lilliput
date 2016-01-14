@@ -4,7 +4,7 @@
   sudo: true
   sudo_user: "{{project.user}}"
   pip: >
-    requirements={{project.root}}/code/requirements.txt
+    requirements={{project.root}}/requirements.txt
     virtualenv={{project.virtualenv}}
     virtualenv_site_packages=yes
   notify:
@@ -14,12 +14,12 @@
   sudo_user: "{{project.user}}"
   file: >
     state=directory
-    path={{project.root}}/code/config
+    path={{project.root}}/config
 
 - name: create settings file
   sudo_user: "{{project.user}}"
   file: >
     state=link
-    path={{project.root}}/code/config/lilliput_settings.py
-    src={{project.root}}/code/lilliput/settings.py
+    path={{project.root}}/config/lilliput_settings.py
+    src={{project.root}}/lilliput/settings.py
 
