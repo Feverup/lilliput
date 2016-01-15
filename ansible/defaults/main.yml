@@ -9,6 +9,9 @@ git:
 
 project:
   appname: lilliput
-  module: lilliput.wsgi
+
+django:
+  root: /var/www/virtualhosts/lilliput/code
   settings: lilliput
+  module: lilliput.wsgi
 
