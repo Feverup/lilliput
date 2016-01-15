@@ -8,7 +8,7 @@
     virtualenv={{git.virtualenv}}
     virtualenv_site_packages=yes
   notify:
-    - restart uwsgi
+    - restart fever services
 
 - name: create settings directory
   sudo_user: "{{git.user}}"
