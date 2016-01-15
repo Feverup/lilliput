@@ -1,11 +1,5 @@
 ---
 
-git:
-  root: /var/www/virtualhosts/lilliput/code
-  virtualenv: /var/www/virtualhosts/lilliput/environ
-  repo: lilliput
-  branch: master
-
 project:
   appname: lilliput
 
