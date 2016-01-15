@@ -1,5 +1,7 @@
 ---
 
+username: fever
+
 git:
   root: /var/www/virtualhosts/lilliput/code
   virtualenv: /var/www/virtualhosts/lilliput/environ
