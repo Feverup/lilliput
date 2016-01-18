@@ -1,8 +1,5 @@
 ---
 
-project:
-  appname: lilliput
-
 django:
   root: /var/www/virtualhosts/lilliput/code
   settings: lilliput
