@@ -1,0 +1,13 @@
+---
+
+galaxy_info:
+  version: v1.0
+  description: Install url shortener
+  company: Fever
+  author: Javier Palacios
+  license: private
+  min_ansible_version: 1.9
+
+dependencies:
+  - role: djangoserver
+

@@ -1,0 +1,25 @@
+---
+
+- name: install pip requirements
+  sudo: true
+  sudo_user: "{{username}}"
+  pip: >
+    requirements={{git.root}}/requirements.txt
+    virtualenv={{git.virtualenv}}
+    virtualenv_site_packages=yes
+  notify:
+    - restart fever services
+
+- name: create settings directory
+  sudo_user: "{{username}}"
+  file: >
+    state=directory
+    path={{git.root}}/config
+
+- name: create settings file
+  sudo_user: "{{username}}"
+  file: >
+    state=link
+    path={{git.root}}/config/lilliput_settings.py
+    src={{git.root}}/lilliput/settings.py
+

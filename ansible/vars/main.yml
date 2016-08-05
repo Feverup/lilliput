@@ -1,0 +1,19 @@
+---
+
+username: fever
+
+git:
+  root: /var/www/virtualhosts/lilliput/code
+  virtualenv: /var/www/virtualhosts/lilliput/environ
+  repo: lilliput
+  branch: master
+
+nginx:
+  vhost_name: lilliput
+  servernames:
+    - s.fvr.to
+
+uwsgi:
+  appname: lilliput
+  num_procs: 2
+
