@@ -43,6 +43,8 @@ class GoToURLView(RedirectView):
     Redirects shortened URL to real URL
     """
 
+    permanent = True
+
     def get_redirect_url(self, **kwargs):
         try:
             obj = ShortLink.objects.get(hash=kwargs['hash'])

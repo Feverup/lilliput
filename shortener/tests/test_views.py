@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
-from django.test import TestCase, RequestFactory, Client
+from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
 from django.core.urlresolvers import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
-from rest_framework.test import APIRequestFactory, force_authenticate
 from ..models import ShortLink
 
 
@@ -17,6 +15,7 @@ class UserMixin(object):
             username='john', email='john@foo.com', password='top_secret'
         )
         self.client.force_authenticate(user=self.user)
+
 
 class TestShortLinkViewSet(UserMixin, APITestCase):
 
