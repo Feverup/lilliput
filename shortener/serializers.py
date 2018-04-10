@@ -4,7 +4,7 @@ from .models import ShortLink
 
 class ShortLinkSerializer(serializers.ModelSerializer):
 
-    short_url = serializers.SerializerMethodField('get_short_url')
+    short_url = serializers.SerializerMethodField()
 
     def get_short_url(self, obj):
         request = self.context.get('request')
